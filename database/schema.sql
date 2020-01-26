@@ -9,5 +9,6 @@ CREATE TABLE listings (
   listing_id INT NOT NULL,
   title VARCHAR(255),
   creation_tsz INT,
-  imageURL text
+  imageURL text,
+  category INT NOT NULL
 );

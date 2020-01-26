@@ -6,8 +6,9 @@ const axios = require('axios');
 var insertMockData = () => {
     for (let i = 0; i < data.length; i++) {
       let listings = data[i];
-      let params = [listings.listing_id, listings.title, listings.creation_tsz];
-      let queryStr = `INSERT INTO listings (listing_id, title, creation_tsz) VALUES (?, ?, ?);`;
+      let randomCategory = Math.floor(Math.random() * 10) + 1;
+      let params = [listings.listing_id, listings.title, listings.creation_tsz, randomCategory];
+      let queryStr = `INSERT INTO listings (listing_id, title, creation_tsz, category) VALUES (?, ?, ?, ?);`;
       db.query(queryStr, params, (err, data) => {
         if (err) {
           console.log(err + i);
