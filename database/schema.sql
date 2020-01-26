@@ -8,5 +8,6 @@ CREATE TABLE listings (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   listing_id INT NOT NULL,
   title VARCHAR(255),
-  creation_tsz INT
+  creation_tsz INT,
+  imageURL text
 );
