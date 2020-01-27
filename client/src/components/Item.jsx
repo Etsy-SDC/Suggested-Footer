@@ -4,7 +4,9 @@ import ReactDOM from 'react-dom';
 function Item(props) {
     return (
         <div>
-            <img src="https://via.placeholder.com/150" alt=""/>
+            
+            <img src={props.imageURL || 'https://via.placeholder.com/150'} alt="" className='image'/>
+            
             <h5>title</h5>
             <p>Company name</p>
             <p>Price</p>

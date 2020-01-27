@@ -10,7 +10,21 @@ const db = mysql.createConnection({
  
 db.connect();
 
+const getImagesFromDb = (imageId, callback) => {
+  db.query(`SELECT imageURL FROM listings WHERE category = (SELECT category FROM listings WHERE listing_id = '${imageId}');`, function(error, result) {
+    if (error) {
+      callback(error, null);
+    } else {
+      console.log(result);
+      callback(null, result);
+    }
+  })
+}
 
-module.exports = { db };
+
+module.exports = { 
+  db,
+  getImagesFromDb
+};
 
 
