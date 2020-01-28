@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 
 function Item(props) {
     return (
-        <div>
+        <div className='item'>
             
             <img src={props.imageURL || 'https://via.placeholder.com/150'} alt="" className='image'/>
-            
-            <h5>title</h5>
+            <div className='module line-clamp'>
+                <p className='title'>{props.title}</p>
+            </div>
             <p>Company name</p>
             <p>Price</p>
         </div>
