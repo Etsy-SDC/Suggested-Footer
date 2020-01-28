@@ -24,7 +24,7 @@ class App extends React.Component {
         console.log(randomListingId);
         axios.get('/listing', {params: {listingId: randomListingId}}).then(data => {
             this.setState({images: data.data});
-            //console.log(data.data);
+            console.log(data.data);
         });
     }
 
@@ -35,7 +35,7 @@ class App extends React.Component {
                 <div className='container'>
                     {this.state.images.map((image, index) => {
                         if (index < 5) {
-                            return <Item key={index} imageURL={image.imageURL} title={image.title}/>
+                            return <Item key={index} imageURL={image.imageURL} title={image.title} price={image.price} companyName={image.company_name}/>
                         }
                     })}
                 </div>

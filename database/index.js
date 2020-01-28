@@ -11,12 +11,10 @@ const db = mysql.createConnection({
 db.connect();
 
 const getImagesFromDb = (imageId, callback) => {
-  db.query(`SELECT imageURL, title FROM listings WHERE category = (SELECT category FROM listings WHERE listing_id = '${imageId}');`, function(error, result) {
+  db.query(`SELECT imageURL, title, company_name, price FROM listings WHERE category = (SELECT category FROM listings WHERE listing_id = '${imageId}');`, function(error, result) {
     if (error) {
       callback(error, null);
     } else {
-      console.log('!!!!!!!!!!!!!');
-      console.log(result);
       callback(null, result);
     }
   })

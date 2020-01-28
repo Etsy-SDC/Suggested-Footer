@@ -91,4 +91,4 @@ var insertMockData = () => {
     }
     addCompanyName();
   }
-  insertCompanyName();
+  //insertCompanyName();

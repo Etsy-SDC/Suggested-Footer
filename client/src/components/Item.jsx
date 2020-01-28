@@ -9,8 +9,8 @@ function Item(props) {
             <div className='module line-clamp'>
                 <p className='title'>{props.title}</p>
             </div>
-            <p>Company name</p>
-            <p>Price</p>
+            <p className='companyName'>{props.companyName}</p>
+            <p className='price'>{props.price}$</p>
         </div>
     );
   }
