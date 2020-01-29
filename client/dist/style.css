@@ -2,7 +2,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-
 .header {
     font-size: 20px;
     color: #222;
@@ -14,18 +13,21 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     margin-right: 75px;
     margin-left: 75px;
     padding-left: 35px;
     padding-right: 35px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .item {
-    width: 20%;
+    width: 19%;
     padding-right: 3px;
     padding-left: 3px;
+    margin-bottom: 20px;
 }
 
 .image {
@@ -39,7 +41,7 @@ body {
 }
 
 .module {
-    width: 200px;
+    /* width: 200px; */
     margin: 0 0 1em 0;
     overflow: hidden;
   }
@@ -75,4 +77,93 @@ body {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
+    display: inline;
+}
+
+.inlineText {
+    display: inline;
+    margin-left: 10px;
+    background-color: #D4E9D7;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 6px;
+    line-height: 1;
+    color: #222;
+}
+
+.blockText {
+    font-size: 12px;
+    color: #222;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    /* width: 150px; */
+    margin-bottom: 50px;
+    background-color: #222;
+    color: #FFF;
+    border-radius: 3px;
+    font-size: 14px;
+    height: 38px;
+    border: 1px solid #222;
+}
+
+.button:hover {
+    background-color: #444;
+}
+
+.nav {
+    display: flex;
+    background-color: #2F466C;
+    width: auto;
+    height: 245px;
+    padding: 35px 25px 25px 25px;
+    color: white;
+    /* overflow: hidden; */
+}
+
+.nav-section {
+    width: 25%;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.download {
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 50%;
+    padding: 4px 2px 4px 20px;
+    margin-top: 30px;
+}
+
+.download span {
+    font-size: 13px;
+    line-height: 2;
+    font-weight: bold;
+}
+
+.icons {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.icons img {
+    margin-right: 30px;
+    width: 35px;
+    height: 35px;
 }

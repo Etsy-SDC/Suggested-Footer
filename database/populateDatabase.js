@@ -6,7 +6,7 @@ const axios = require('axios');
 var insertMockData = () => {
     for (let i = 0; i < data.length; i++) {
       let listings = data[i];
-      let randomCategory = Math.floor(Math.random() * 10) + 1;
+      let randomCategory = Math.floor(Math.random() * 7) + 1;
       let params = [listings.listing_id, listings.title, listings.price, listings.creation_tsz, randomCategory];
       let queryStr = `INSERT INTO listings (listing_id, title, price, creation_tsz, category) VALUES (?, ?, ?, ?, ?);`;
       db.query(queryStr, params, (err, data) => {
@@ -91,4 +91,4 @@ var insertMockData = () => {
     }
     addCompanyName();
   }
-  //insertCompanyName();
+  insertCompanyName();
