@@ -43,8 +43,8 @@ function Footer(props) {
                         <span>Download the Etsy App</span>
                     </div>
                     <div className='icons'>
-                        <img src='https://via.placeholder.com/30' alt=""/>
-                        <img src='https://via.placeholder.com/30' alt=""/>
+                        <img src='https://i.dlpng.com/static/png/5242502-instagram-icon-white-png-175206-free-icons-library-instagram-white-png-653_653_preview.png' alt=""/>
+                        <img src='https://iconsplace.com/wp-content/uploads/_icons/ffffff/256/png/facebook-icon-18-256.png' alt="" id='facebook-icon'/>
                         <img src='https://via.placeholder.com/30' alt=""/>
                         <img src='https://via.placeholder.com/30' alt=""/>
                     </div>

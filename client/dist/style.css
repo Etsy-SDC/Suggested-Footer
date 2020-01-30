@@ -5,7 +5,6 @@ body {
 .header {
     font-size: 20px;
     color: #222;
-    /* font-family: Arial, Helvetica, sans-serif; */
     font-weight: 400;
     text-align: center;
     line-height: 1.4;
@@ -41,7 +40,6 @@ body {
 }
 
 .module {
-    /* width: 200px; */
     margin: 0 0 1em 0;
     overflow: hidden;
   }
@@ -66,7 +64,6 @@ body {
 }
 
 .companyName {
-    /* font-family: Arial, Helvetica, sans-serif; */
     color: #595959;
     font-size: 12px;
 }
@@ -78,11 +75,22 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     display: inline;
+    margin-right: 10px;
+}
+
+.smallPrice {
+    color: #2E8539;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.smallPrice span {
+    text-decoration: line-through;
 }
 
 .inlineText {
     display: inline;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     background-color: #D4E9D7;
     border-radius: 15px;
     font-size: 11px;
@@ -103,7 +111,6 @@ body {
 }
 
 .button {
-    /* width: 150px; */
     margin-bottom: 50px;
     background-color: #222;
     color: #FFF;
@@ -166,4 +173,10 @@ li {
     margin-right: 30px;
     width: 35px;
     height: 35px;
+}
+
+#facebook-icon {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 2px;
 }
