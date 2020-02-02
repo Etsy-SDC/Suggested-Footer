@@ -48,7 +48,7 @@ body {
     margin: 0;
   }
 
-  .line-clamp {
+.line-clamp {
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;  
@@ -151,6 +151,15 @@ li {
     padding-bottom: 6px;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .download {
     border: 2px solid white;
     border-radius: 20px;
@@ -169,8 +178,9 @@ li {
     margin-top: 20px;
     margin-bottom: 15px;
 }
+
 .icons img {
-    margin-right: 30px;
+    margin-right: 20px;
     width: 35px;
     height: 35px;
 }
@@ -179,4 +189,69 @@ li {
     height: 30px;
     width: 30px;
     margin-bottom: 2px;
+}
+
+.bottom {
+    height: 45px;
+    padding: 40px 0 20px 0;
+    background-color: #232247;
+}
+
+.span-container {
+    display: flex;
+    align-items: center;
+}
+
+.footer-span {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.flag {
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+.right-side {
+    float: right;
+    margin-top: -22px;
+    margin-right: 20px;
+}
+
+.copy-span {
+    padding-right: 25px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: white;
+}
+
+.right-span {
+    padding-right: 25px;
+    text-decoration: underline;
+    color: white;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+
+.ikona {
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    background-color: #FFF;
+}
+
+.ikona:hover {
+    opacity: 0.5;
+}
+
+.wt-fill-denim {
+    display: block;
+    fill: #2F466C;
 }
