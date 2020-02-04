@@ -20,10 +20,24 @@ const getImagesFromDb = (imageId, callback) => {
   })
 }
 
+const getNewListingId = (imageUrl, callback) => {
+  console.log('result');
+  db.query(`SELECT listing_id FROM listings WHERE imageURL = '${imageUrl}';`, function(error, result) {
+    if (error) {
+      callback(error, null);
+    } else {
+      console.log(result[0].listing_id);
+      callback(null, result);
+    }
+  })
+}
+
+
 
 module.exports = { 
   db,
-  getImagesFromDb
+  getImagesFromDb,
+  getNewListingId
 };
 
 

@@ -9,10 +9,22 @@ app.use(express.static(path.join(__dirname, "../client/dist")));
 const db = require('../database/index.js');
 
 
-app.get('/listing', (req, res) => {
-  let randomListingId = req.query.listingId;
-  console.log(randomListingId);
-  db.getImagesFromDb(randomListingId, (error, data) => {
+app.get(`/listing/:listing_id`, (req, res) => {
+  //let randomListingId = req.query.listing_Id;
+  //console.log(randomListingId);
+  console.log('params   ' + req.params.listing_id);
+  db.getImagesFromDb(req.params.listing_id, (error, data) => {
+    if (error) {
+      res.send(error);
+    } else {
+      res.send(data);
+    }
+  })
+})
+
+app.get('/update', (req, res) => {
+  console.log(req.query.address);
+  db.getNewListingId(req.query.address, (error, data) => {
     if (error) {
       res.send(error);
     } else {

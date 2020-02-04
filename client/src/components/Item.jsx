@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 
 let randomIndex = Math.floor(Math.random() * 4);
     let randomIndex1 = Math.floor(Math.random() * 5);
@@ -18,7 +19,7 @@ function Item(props) {
     } else {
         shippingOption = <div className='inlineText'>FREE shipping</div>
     }
-    console.log(props.index, + '  ' + randomIndex3);
+    
     if (props.index === randomIndex) {
     price = <div><p className='price'>{(props.price * 0.5).toFixed(2)}$</p><p className='price smallPrice'><span>{props.price}$</span> (50% off)</p></div>;
     }
@@ -34,9 +35,33 @@ function Item(props) {
     if (props.index === randomIndex4) {
         price = <div><p className='price'>{(props.price * 0.3).toFixed(2)}$</p><p className='price smallPrice'><span>{props.price}$</span> (70% off)</p></div>;
     }
+
+    const handleItemClick = (e, listingId) => {
+        let imageAddress = e.target.getAttribute('src');
+        
+        axios.get('/update', {params: {address: imageAddress}}).then(data => {
+            let newListingId = data.data[0].listing_id;
+            console.log('new listingId ' + newListingId);
+            const event = new CustomEvent("itemChanged", {
+                detail: {
+                  //listingId: 651186954
+                  listingId: data.data[0].listing_id
+                }
+              });
+              window.dispatchEvent(event);
+        })
+
+
+        // const event = new CustomEvent("itemChanged", {
+        //     detail: {
+        //       listingId: 651186954
+        //     }
+        //   });
+        //   window.dispatchEvent(event);
+    }
     
     return (
-        <div className='item'>
+        <div className='item' onClick={handleItemClick}>
             <img src={props.imageURL || 'https://via.placeholder.com/150'} alt="" className='image'/>
             <div className='module line-clamp'>
                 <p className='title'>{props.title}</p>
