@@ -57,12 +57,12 @@ class App extends React.Component {
                             {this.state.images.map((image, index) => {
                                 if (index < 5) {
                                     button = <button className='button' onClick={this.handleSubmit}>Shop more similar items</button>
-                                    return <Item key={index} imageURL={image.imageURL} title={image.title} price={image.price} companyName={image.company_name} index={index} id={this.state.listingId}/>
+                                    return <Item key={index} imageURL={image.imageURL} title={image.title} price={image.price} companyName={image.company_name} index={index} id={image.listing_id}/>
                                 }
                                 if (this.state.shopMore === true) {
                                     if (index < 15) {
                                         button = <div></div>
-                                        return <Item key={index} imageURL={image.imageURL} title={image.title} price={image.price} companyName={image.company_name} index={index}/>
+                                        return <Item key={index} imageURL={image.imageURL} title={image.title} price={image.price} companyName={image.company_name} index={index} id={image.listing_id}/>
                                     }
                                 } 
                             })}

@@ -17,6 +17,7 @@ app.get(`/listing/:listing_id`, (req, res) => {
     if (error) {
       res.send(error);
     } else {
+      console.log(data);
       res.send(data);
     }
   })

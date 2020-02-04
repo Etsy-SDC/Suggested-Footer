@@ -1,0 +1,11 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "agatadrozdowska/suggested-footer"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "3030"
+    }
+  ]
+}

@@ -37,7 +37,7 @@ function Item(props) {
     }
 
     const handleItemClick = (e, listingId) => {
-    
+            console.log(listingId);
             const event = new CustomEvent("itemChanged", {
                 detail: {
                   listingId
@@ -49,8 +49,8 @@ function Item(props) {
 
     
     return (
-        <div className='item' onClick={(e, ) => handleItemClick()}>
-            <img src={props.imageURL || 'https://via.placeholder.com/150'} alt={props.id} className='image'/>
+        <div className='item' onClick={e => handleItemClick(e, props.id)}>
+            <img src={props.imageURL || 'https://via.placeholder.com/150'} alt='' className='image'/>
             <div className='module line-clamp'>
                 <p className='title'>{props.title}</p>
             </div>
