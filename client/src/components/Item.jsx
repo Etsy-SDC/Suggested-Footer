@@ -37,32 +37,20 @@ function Item(props) {
     }
 
     const handleItemClick = (e, listingId) => {
-        let imageAddress = e.target.getAttribute('src');
-        
-        axios.get('/update', {params: {address: imageAddress}}).then(data => {
-            let newListingId = data.data[0].listing_id;
-            console.log('new listingId ' + newListingId);
+    
             const event = new CustomEvent("itemChanged", {
                 detail: {
-                  //listingId: 651186954
-                  listingId: data.data[0].listing_id
+                  listingId
                 }
               });
               window.dispatchEvent(event);
-        })
+        };
 
 
-        // const event = new CustomEvent("itemChanged", {
-        //     detail: {
-        //       listingId: 651186954
-        //     }
-        //   });
-        //   window.dispatchEvent(event);
-    }
     
     return (
-        <div className='item' onClick={handleItemClick}>
-            <img src={props.imageURL || 'https://via.placeholder.com/150'} alt="" className='image'/>
+        <div className='item' onClick={(e, ) => handleItemClick()}>
+            <img src={props.imageURL || 'https://via.placeholder.com/150'} alt={props.id} className='image'/>
             <div className='module line-clamp'>
                 <p className='title'>{props.title}</p>
             </div>
