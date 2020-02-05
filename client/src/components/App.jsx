@@ -53,7 +53,7 @@ class App extends React.Component {
   render() {
     let button;
     return (
-      <div>
+      <div className="main-container">
         <h3 className="header">You may also like</h3>
         <div>
           <div className="container">

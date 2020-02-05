@@ -3,7 +3,7 @@ body {
   margin: 0;
 }
 
-.header-container {
+#suggested .main-container {
   display: inline-block;
 }
 
@@ -173,6 +173,7 @@ body {
   width: 50%;
   padding: 4px 10px 4px 10px;
   margin-top: 30px;
+  text-align: center;
 }
 
 #suggested .download span {
