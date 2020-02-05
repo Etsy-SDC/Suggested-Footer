@@ -1,5 +1,10 @@
 body {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.header-container {
+  display: inline-block;
 }
 
 #suggested .header {
@@ -11,6 +16,7 @@ body {
 }
 
 #suggested .container {
+  width: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -104,8 +110,12 @@ body {
 }
 
 #suggested .button-container {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  display: block;
+  width: 15%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #suggested .button {
@@ -126,7 +136,7 @@ body {
   display: flex;
   background-color: #2f466c;
   width: auto;
-  height: 245px;
+  /* height: 245px; */
   padding: 35px 25px 25px 25px;
   color: white;
 }
@@ -161,7 +171,7 @@ body {
   border: 2px solid white;
   border-radius: 20px;
   width: 50%;
-  padding: 4px 2px 4px 20px;
+  padding: 4px 10px 4px 10px;
   margin-top: 30px;
 }
 
@@ -189,7 +199,7 @@ body {
 }
 
 #suggested .bottom {
-  height: 45px;
+  /* height: 45px; */
   padding: 40px 0 20px 0;
   background-color: #232247;
 }
