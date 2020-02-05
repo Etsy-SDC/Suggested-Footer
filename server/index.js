@@ -1,29 +1,26 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const path = require('path');
+const path = require("path");
 const app = express();
 const PORT = 3030;
+const cors = require("cors");
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "../client/dist")));
-const db = require('../database/index.js');
+const db = require("../database/index.js");
 
-
-app.get(`/listing/:listing_id`, (req, res) => {
-  //let randomListingId = req.query.listing_Id;
-  //console.log(randomListingId);
-  console.log('params   ' + req.params.listing_id);
-  db.getImagesFromDb(req.params.listing_id, (error, data) => {
+app.get(`/listings`, (req, res) => {
+  db.getImagesFromDb(req.query.listing_Id, (error, data) => {
     if (error) {
       res.send(error);
     } else {
-      console.log(data);
       res.send(data);
     }
-  })
-})
+  });
+});
 
-app.get('/update', (req, res) => {
+app.get("/update", (req, res) => {
   console.log(req.query.address);
   db.getNewListingId(req.query.address, (error, data) => {
     if (error) {
@@ -31,9 +28,8 @@ app.get('/update', (req, res) => {
     } else {
       res.send(data);
     }
-  })
-})
-
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);

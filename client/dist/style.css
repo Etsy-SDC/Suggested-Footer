@@ -1,258 +1,242 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: red;
+  font-family: "Roboto", sans-serif;
 }
 
-.header {
-    font-size: 20px;
-    color: #222;
-    font-weight: 400;
-    text-align: center;
-    line-height: 1.4;
+#suggested .header {
+  font-size: 20px;
+  color: #222;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.4;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-right: 75px;
-    margin-left: 75px;
-    padding-left: 35px;
-    padding-right: 35px;
-    cursor: pointer;
-    margin-bottom: 20px;
+#suggested .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-right: 75px;
+  margin-left: 75px;
+  padding-left: 35px;
+  padding-right: 35px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
-.item {
-    width: 19%;
-    padding-right: 3px;
-    padding-left: 3px;
-    margin-bottom: 20px;
+#suggested .item {
+  width: 19%;
+  padding-right: 3px;
+  padding-left: 3px;
+  margin-bottom: 20px;
 }
 
-.image {
-    width: 225px;
-    height: 180px;
-    border-radius: 2px;
+#suggested .image {
+  width: 225px;
+  height: 180px;
+  border-radius: 2px;
 }
 
-.image:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+#suggested .image:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.module {
-    margin: 0 0 1em 0;
-    overflow: hidden;
-  }
-
-  .module p {
-    margin: 0;
-  }
-
-.line-clamp {
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;  
-  }
-
-
-.title {
-    font-size: 14px;
-    font-weight: 300;
-    /* font-family: Arial, Helvetica, sans-serif; */
-    line-height: 1.6;
-    width: auto; 
+#suggested .module {
+  margin: 0 0 1em 0;
+  overflow: hidden;
 }
 
-.companyName {
-    color: #595959;
-    font-size: 12px;
+#suggested .module p {
+  margin: 0;
 }
 
-.price {
-    font-weight: 500;
-    color: #222;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    display: inline;
-    margin-right: 10px;
+#suggested .line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
-.smallPrice {
-    color: #2E8539;
-    font-size: 12px;
-    line-height: 1.6;
+#suggested .title {
+  font-size: 14px;
+  font-weight: 300;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  line-height: 1.6;
+  width: auto;
 }
 
-.smallPrice span {
-    text-decoration: line-through;
+#suggested .companyName {
+  color: #595959;
+  font-size: 12px;
 }
 
-.inlineText {
-    display: inline;
-    /* margin-left: 10px; */
-    background-color: #D4E9D7;
-    border-radius: 15px;
-    font-size: 11px;
-    font-weight: bold;
-    padding: 3px 6px;
-    line-height: 1;
-    color: #222;
+#suggested .price {
+  font-weight: 500;
+  color: #222;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  display: inline;
+  margin-right: 10px;
 }
 
-.blockText {
-    font-size: 12px;
-    color: #222;
+#suggested .smallPrice {
+  color: #2e8539;
+  font-size: 12px;
+  line-height: 1.6;
 }
 
-.button-container {
-    display: flex;
-    justify-content: center;
+#suggested .smallPrice span {
+  text-decoration: line-through;
 }
 
-.button {
-    margin-bottom: 50px;
-    background-color: #222;
-    color: #FFF;
-    border-radius: 3px;
-    font-size: 14px;
-    height: 38px;
-    border: 1px solid #222;
+#suggested .inlineText {
+  display: inline;
+  background-color: #d4e9d7;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 3px 6px;
+  line-height: 1;
+  color: #222;
 }
 
-.button:hover {
-    background-color: #444;
+#suggested .blockText {
+  font-size: 12px;
+  color: #222;
 }
 
-.nav {
-    display: flex;
-    background-color: #2F466C;
-    width: auto;
-    height: 245px;
-    padding: 35px 25px 25px 25px;
-    color: white;
-    /* overflow: hidden; */
+#suggested .button-container {
+  display: flex;
+  justify-content: center;
 }
 
-.nav-section {
-    width: 25%;
+#suggested .button {
+  margin-bottom: 50px;
+  background-color: #222;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 14px;
+  height: 38px;
+  border: 1px solid #222;
 }
 
-ul {
-    list-style-type: none;
-    padding-left: 0;
+#suggested .button:hover {
+  background-color: #444;
 }
 
-li {
-    font-weight: 300;
-    font-size: 13px;
-    line-height: 18px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+#suggested .nav {
+  display: flex;
+  background-color: #2f466c;
+  width: auto;
+  height: 245px;
+  padding: 35px 25px 25px 25px;
+  color: white;
 }
 
-a {
-    color: white;
-    text-decoration: none;
+#suggested .nav-section {
+  width: 25%;
 }
 
-a:hover {
-    text-decoration: underline;
+#suggested ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.download {
-    border: 2px solid white;
-    border-radius: 20px;
-    width: 50%;
-    padding: 4px 2px 4px 20px;
-    margin-top: 30px;
+#suggested li {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
-.download span {
-    font-size: 13px;
-    line-height: 2;
-    font-weight: bold;
+#suggested a {
+  color: white;
+  text-decoration: none;
 }
 
-.icons {
-    margin-top: 20px;
-    margin-bottom: 15px;
+#suggested a:hover {
+  text-decoration: underline;
 }
 
-.icons img {
-    margin-right: 20px;
-    width: 35px;
-    height: 35px;
+#suggested .download {
+  border: 2px solid white;
+  border-radius: 20px;
+  width: 50%;
+  padding: 4px 2px 4px 20px;
+  margin-top: 30px;
 }
 
-#facebook-icon {
-    height: 30px;
-    width: 30px;
-    margin-bottom: 2px;
+#suggested .download span {
+  font-size: 13px;
+  line-height: 2;
+  font-weight: bold;
 }
 
-.bottom {
-    height: 45px;
-    padding: 40px 0 20px 0;
-    background-color: #232247;
+#suggested .icons {
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
-.span-container {
-    display: flex;
-    align-items: center;
+#suggested .icons img {
+  margin-right: 20px;
+  width: 35px;
+  height: 35px;
 }
 
-.footer-span {
-    padding-left: 5px;
-    padding-right: 5px;
-    color: white;
-    font-size: 13px;
-    line-height: 1.4;
+#suggested #facebook-icon {
+  height: 30px;
+  width: 30px;
+  margin-bottom: 2px;
 }
 
-.flag {
-    height: 25px;
-    width: 25px;
-    border-radius: 50px;
-    margin-left: 20px;
-    margin-right: 5px;
+#suggested .bottom {
+  height: 45px;
+  padding: 40px 0 20px 0;
+  background-color: #232247;
 }
 
-.right-side {
-    float: right;
-    margin-top: -22px;
-    margin-right: 20px;
+#suggested .span-container {
+  display: flex;
+  align-items: center;
 }
 
-.copy-span {
-    padding-right: 25px;
-    font-size: 13px;
-    line-height: 1.4;
-    color: white;
+#suggested .footer-span {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  font-size: 13px;
+  line-height: 1.4;
 }
 
-.right-span {
-    padding-right: 25px;
-    text-decoration: underline;
-    color: white;
-    font-size: 13px;
-    line-height: 1.4;
+#suggested .flag {
+  height: 25px;
+  width: 25px;
+  border-radius: 50px;
+  margin-left: 20px;
+  margin-right: 5px;
 }
 
-
-.ikona {
-    height: 70px;
-    width: 70px;
-    border-radius: 50px;
-    background-color: #FFF;
+#suggested .right-side {
+  float: right;
+  margin-top: -22px;
+  margin-right: 20px;
 }
 
-.ikona:hover {
-    opacity: 0.5;
+#suggested .copy-span {
+  padding-right: 25px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: white;
 }
 
-.wt-fill-denim {
-    display: block;
-    fill: #2F466C;
+#suggested .right-span {
+  padding-right: 25px;
+  text-decoration: underline;
+  color: white;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+#suggested .wt-fill-denim {
+  display: block;
+  fill: #2f466c;
 }
