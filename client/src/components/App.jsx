@@ -13,17 +13,17 @@ class App extends React.Component {
     this.state = {
       images: [],
       shopMore: false,
-      listingId: 676514443
+      listingId: 651186954
     };
     this.getSuggestedItems = this.getSuggestedItems.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleMoreItemsClick = this.handleMoreItemsClick.bind(this);
   }
 
   componentDidMount() {
     this.getSuggestedItems();
     window.addEventListener("itemChanged", event => {
       this.setState({ listingId: Number(event.detail.listingId) }, () => {
-        console.log("!!!!!!!!! " + this.state.listingId);
         this.getSuggestedItems();
       });
     });
@@ -33,19 +33,17 @@ class App extends React.Component {
     this.setState({ shopMore: true });
   }
 
+  handleMoreItemsClick() {
+    this.setState({ shopMore: false });
+  }
+
   getSuggestedItems() {
-    // let randomIndex = Math.floor(Math.random() * data.length);
-    // let randomListingId = data[randomIndex].listing_id;
-    // console.log(randomListingId);
-    console.log("I AM HERE");
-    console.log("state " + this.state.listingId);
     axios
       .get("/listings", {
         params: { listing_Id: this.state.listingId },
         baseURL
       })
       .then(data => {
-        console.log(data.data);
         this.setState({ images: data.data });
       });
   }
@@ -73,6 +71,7 @@ class App extends React.Component {
                     companyName={image.company_name}
                     index={index}
                     id={image.listing_id}
+                    handleMoreItemsClick={this.handleMoreItemsClick}
                   />
                 );
               }
@@ -88,6 +87,7 @@ class App extends React.Component {
                       companyName={image.company_name}
                       index={index}
                       id={image.listing_id}
+                      handleMoreItemsClick={this.handleMoreItemsClick}
                     />
                   );
                 }

@@ -65,28 +65,36 @@ function Item(props) {
   }
 
   const handleItemClick = (e, listingId) => {
-    console.log(listingId);
     const event = new CustomEvent("itemChanged", {
       detail: {
         listingId
       }
     });
     window.dispatchEvent(event);
+    props.handleMoreItemsClick();
   };
 
   return (
-    <div className="item" onClick={e => handleItemClick(e, props.id)}>
-      <img
-        src={props.imageURL || "https://via.placeholder.com/150"}
-        alt=""
-        className="image"
-      />
-      <div className="module line-clamp">
-        <p className="title">{props.title}</p>
-      </div>
-      <p className="companyName">{props.companyName}</p>
-      {price}
-      {shippingOption}
+    <div
+      className="item"
+      onClick={e => {
+        handleItemClick(e, props.id);
+        props.handleMoreItemsClick;
+      }}
+    >
+      <a href="#">
+        <img
+          src={props.imageURL || "https://via.placeholder.com/150"}
+          alt=""
+          className="image"
+        />
+        <div className="module line-clamp">
+          <p className="title">{props.title}</p>
+        </div>
+        <p className="companyName">{props.companyName}</p>
+        {price}
+        {shippingOption}
+      </a>
     </div>
   );
 }

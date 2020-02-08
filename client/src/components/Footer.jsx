@@ -4,11 +4,11 @@ import ReactDOM from "react-dom";
 function Footer(props) {
   return (
     <footer className="footer">
-      <div class="prepended-background-shape wt-body-max-width">
-        <span class="inline-svg">
+      <div className="prepended-background-shape wt-body-max-width">
+        <span className="inline-svg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="wt-fill-denim wt-width-full"
+            className="wt-fill-denim wt-width-full"
             viewBox="0 0 1280 30"
             preserveAspectRatio="xMidYMid slice"
             aria-hidden="true"
@@ -26,7 +26,7 @@ function Footer(props) {
               <a href="#">Gift cards</a>
             </li>
             <li>
-              <a href="#">Etsy blog</a>
+              <a href="#">Hogwartsy blog</a>
             </li>
           </ul>
         </div>
@@ -34,7 +34,7 @@ function Footer(props) {
           <h4>Sell</h4>
           <ul>
             <li>
-              <a href="#">Sell on Etsy</a>
+              <a href="#">Sell on Hogwartsy</a>
             </li>
             <li>
               <a href="#">Teams</a>
@@ -51,7 +51,7 @@ function Footer(props) {
           <h4>About</h4>
           <ul>
             <li>
-              <a href="#">Etsy, Inc.</a>
+              <a href="#">Hogwartsy, Inc.</a>
             </li>
             <li>
               <a href="#">Policies</a>
@@ -81,7 +81,7 @@ function Footer(props) {
             </li>
           </ul>
           <div className="download">
-            <span>Download the Etsy App</span>
+            <span>Download the Hogwartsy App</span>
           </div>
           <div className="icons">
             {/* <img src='https://i.dlpng.com/static/png/5242502-instagram-icon-white-png-175206-free-icons-library-instagram-white-png-653_653_preview.png' alt=""/> */}
@@ -122,7 +122,7 @@ function Footer(props) {
             </div>
           </div>
           <div className="right-side span-container">
-            <span className="copy-span">&copy; 2020 Etsy, Inc.</span>
+            <span className="copy-span">&copy; 2020 Hogwartsy, Inc.</span>
             <a href="">
               <span className="right-span">Terms of Use</span>
             </a>

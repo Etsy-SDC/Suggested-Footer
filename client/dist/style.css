@@ -5,10 +5,11 @@ body {
 
 #suggested .main-container {
   display: inline-block;
+  width: 100%;
 }
 
 #suggested .header {
-  font-size: 20px;
+  font-size: 1.3em;
   color: #222;
   font-weight: 400;
   text-align: center;
@@ -19,9 +20,9 @@ body {
   width: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-right: 75px;
-  margin-left: 100px;
+  justify-content: space-between;
+  margin-right: 50px;
+  margin-left: 50px;
   padding-left: 35px;
   padding-right: 35px;
   cursor: pointer;
@@ -36,9 +37,9 @@ body {
 }
 
 #suggested .image {
-  width: 215px;
-  height: 180px;
-  border-radius: 2px;
+  width: 98%;
+  height: 65%;
+  border-radius: 2%;
 }
 
 #suggested .image:hover {
@@ -61,21 +62,22 @@ body {
 }
 
 #suggested .title {
-  font-size: 14px;
+  color: #222;
+  font-size: 0.9em;
   font-weight: 300;
   line-height: 1.6;
-  width: auto;
+  width: 95%;
 }
 
 #suggested .companyName {
   color: #595959;
-  font-size: 12px;
+  font-size: 0.8em;
 }
 
 #suggested .price {
   font-weight: 500;
   color: #222;
-  font-size: 16px;
+  font-size: 1.1em;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   display: inline;
@@ -84,7 +86,7 @@ body {
 
 #suggested .smallPrice {
   color: #2e8539;
-  font-size: 12px;
+  font-size: 0.73em;
   line-height: 1.6;
 }
 
@@ -96,7 +98,7 @@ body {
   display: inline;
   background-color: #d4e9d7;
   border-radius: 15px;
-  font-size: 11px;
+  font-size: 0.7em;
   font-weight: bold;
   padding: 3px 6px;
   line-height: 1;
@@ -104,25 +106,23 @@ body {
 }
 
 #suggested .blockText {
-  font-size: 12px;
+  font-size: 0.8em;
   color: #222;
 }
 
 #suggested .button-container {
-  /* display: flex;
-  justify-content: center; */
   display: block;
-  width: 15%;
+  width: 12%;
   margin-right: auto;
   margin-left: auto;
 }
 
 #suggested .button {
-  margin-bottom: 50px;
+  margin-bottom: 35%;
   background-color: #222;
   color: #fff;
   border-radius: 3px;
-  font-size: 14px;
+  font-size: 0.8em;
   height: 38px;
   border: 1px solid #222;
 }
@@ -151,7 +151,7 @@ body {
 
 #suggested li {
   font-weight: 300;
-  font-size: 13px;
+  font-size: 0.8em;
   line-height: 18px;
   padding-top: 6px;
   padding-bottom: 6px;
@@ -162,21 +162,17 @@ body {
   text-decoration: none;
 }
 
-#suggested a:hover {
-  text-decoration: underline;
-}
-
 #suggested .download {
   border: 2px solid white;
   border-radius: 20px;
-  width: 50%;
-  padding: 4px 10px 4px 10px;
+  width: 60%;
+  padding: 4px 2px 4px 2px;
   margin-top: 30px;
   text-align: center;
 }
 
 #suggested .download span {
-  font-size: 13px;
+  font-size: 0.8em;
   line-height: 2;
   font-weight: bold;
 }
@@ -213,7 +209,7 @@ body {
   padding-left: 5px;
   padding-right: 5px;
   color: white;
-  font-size: 13px;
+  font-size: 0.8em;
   line-height: 1.4;
 }
 
@@ -233,7 +229,7 @@ body {
 
 #suggested .copy-span {
   padding-right: 25px;
-  font-size: 13px;
+  font-size: 0.8em;
   line-height: 1.4;
   color: white;
 }
@@ -242,7 +238,7 @@ body {
   padding-right: 25px;
   text-decoration: underline;
   color: white;
-  font-size: 13px;
+  font-size: 0.8em;
   line-height: 1.4;
 }
 
