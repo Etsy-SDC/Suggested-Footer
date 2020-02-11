@@ -11,9 +11,7 @@ const db = mysql.createConnection({
 db.connect();
 
 const getImagesFromDb = (imageId, callback) => {
-  const randomCategory = Math.floor(Math.random() * 6);
-  //const queryString = `SELECT imageURL, title, company_name, price, listing_id FROM listings WHERE category = (SELECT category FROM listings WHERE listing_id = '${imageId}') ORDER BY RAND();`
-  const queryString = `SELECT imageURL, title, company_name, price, listing_id FROM listings WHERE listing_id != '${imageId}' ORDER BY RAND() LIMIT 15;`;
+  const queryString = `SELECT imageURL, title, company_name, price, listing_id FROM listings WHERE category = (SELECT category FROM listings WHERE listing_id = '${imageId}') AND listing_id != '${imageId}' ORDER BY RAND() LIMIT 15;`;
   db.query(queryString, function(error, result) {
     if (error) {
       callback(error, null);

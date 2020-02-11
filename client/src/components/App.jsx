@@ -44,7 +44,7 @@ class App extends React.Component {
         baseURL
       })
       .then(data => {
-        this.setState({ images: data.data });
+        this.setState({ images: data.data, shopMore: false });
       });
   }
 
